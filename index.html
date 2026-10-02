@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph's Sentinel — Browser Security Shield</title>
+    <meta name="description" content="Joseph's Sentinel — Real-time browser protection blocking phishing traps, unsecured HTTP sites, vulgar links, and adult YouTube content.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- GSAP + ScrollTrigger for scroll-driven 3D animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- 3D Interactive Background Canvas -->
+    <canvas id="bg-canvas-3d"></canvas>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <div class="logo-badge">🛡️</div>
+                <div>
+                    <div class="logo-title">JOSEPH'S SENTINEL</div>
+                    <div class="logo-sub">Security Shield — 2026</div>
+                </div>
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="#capabilities">Capabilities Track</a></li>
+                <li><a href="#simulator">3D Simulator</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#install-guide">Install Guide</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+
+            <div>
+                <a href="JoysShield-Extension.zip" download="JoysShield-Extension.zip" class="btn btn-mono-primary btn-sm">
+                    <span>⬇️ Download Extension</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section inspired by unfazedsolutions.online -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-tag">
+                <span class="dot-pulse"></span>
+                <span>v1.2.0 Active · 100% On-Device Privacy</span>
+            </div>
+
+            <h1 class="hero-headline">
+                Scams move. HTTP links mutate.<br>
+                <span class="text-muted">Joseph's Sentinel protects anyway.</span>
+            </h1>
+
+            <p class="hero-description">
+                A high-performance 360° browser security engine. Intercepts phishing traps, unencrypted cleartext HTTP traffic, explicit vulgar links, adult YouTube content, and gambling UI canvas patterns in real-time.
+            </p>
+            
+            <div class="hero-cta-group">
+                <a href="JoysShield-Extension.zip" download="JoysShield-Extension.zip" class="btn btn-mono-primary" id="main-download-btn">
+                    <span>⬇️ Download Extension (.ZIP)</span>
+                </a>
+                <a href="#simulator" class="btn btn-mono-secondary">
+                    <span>⚡ Live 3D Simulator</span>
+                </a>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-val">&lt; 1ms</div>
+                    <div class="stat-desc">On-Device Detection Latency</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-val">5 Modules</div>
+                    <div class="stat-desc">Security Disciplines</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-val">10,000+</div>
+                    <div class="stat-desc">Indexed Threat Signatures</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-val">100%</div>
+                    <div class="stat-desc">Zero Data Logging & Private</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Capabilities Horizontal Track (Inspired by Unfazed Solutions) -->
+    <section id="capabilities" class="track-section">
+        <div class="container">
+            <div class="section-meta">
+                <span class="section-label">Security Capabilities</span>
+                <h2 class="section-heading">Everything between the threat and the live URL.</h2>
+                <p class="section-subtext">Five defense disciplines, one browser engine. Hover or click any card to turn it over 180° and view technical signatures on the back face.</p>
+            </div>
+
+            <div class="track-instruction">
+                <span>◀ Scroll down to explore cards ▶</span>
+                <span>Click / Hover to flip 🔄</span>
+            </div>
+
+            <!-- Horizontal Steering Track -->
+            <div class="track-wrapper" id="track-wrapper">
+                
+                <!-- Card 1 -->
+                <div class="card-3d-wrap">
+                    <div class="card-3d-inner">
+                        <div class="card-front">
+                            <div>
+                                <div class="card-front-top">
+                                    <span class="card-number">01 / 05</span>
+                                    <span class="card-badge-icon">🚨</span>
+                                </div>
+                                <h3 class="card-front-title">Anti-Phishing & Typosquatting</h3>
+                                <p class="card-front-body">
+                                    Detects lookalike brand spoofing (micr0soft.com), multi-subdomain traps, IP literals, and malicious blacklists in real-time.
+                                </p>
+                            </div>
+                            <div class="card-front-foot">
+                                <span>Heuristics Engine</span>
+                                <span>Flip for Specs 🔄</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-title">// TECH SPEC 01</div>
+                            <div class="card-back-code">
+HeuristicsAnalyzer.analyze(url) {
+  SUSPICIOUS_TLDS: ['.xyz','.top','.tk']
+  BRAND_TYPOS: ['micr0soft', 'paypa1']
+  REASON: 'heuristics_typo'
+}
+                            </div>
+                            <div class="card-back-tag">WebNavigation Pre-Hook</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-3d-wrap">
+                    <div class="card-3d-inner">
+                        <div class="card-front">
+                            <div>
+                                <div class="card-front-top">
+                                    <span class="card-number">02 / 05</span>
+                                    <span class="card-badge-icon">🔒</span>
+                                </div>
+                                <h3 class="card-front-title">Forced HTTP Insecure Block</h3>
+                                <p class="card-front-body">
+                                    Automatically intercepts unencrypted http:// links to prevent cleartext password & session token sniffing.
+                                </p>
+                            </div>
+                            <div class="card-front-foot">
+                                <span>Cleartext Enforcer</span>
+                                <span>Flip for Specs 🔄</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-title">// TECH SPEC 02</div>
+                            <div class="card-back-code">
+if (urlObj.protocol === 'http:') {
+  isBlocked = true;
+  blockReason = 'insecure_connection';
+  chrome.tabs.update(tabId, { url });
+}
+                            </div>
+                            <div class="card-back-tag">Protocol Guard</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-3d-wrap">
+                    <div class="card-3d-inner">
+                        <div class="card-front">
+                            <div>
+                                <div class="card-front-top">
+                                    <span class="card-number">03 / 05</span>
+                                    <span class="card-badge-icon">🔞</span>
+                                </div>
+                                <h3 class="card-front-title">Vulgar & Adult Link Guard</h3>
+                                <p class="card-front-body">
+                                    Scans incoming URLs, paths, and hyperlink targets for vulgar or explicit adult keywords and blocks navigation.
+                                </p>
+                            </div>
+                            <div class="card-front-foot">
+                                <span>Keyword Sanitizer</span>
+                                <span>Flip for Specs 🔄</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-title">// TECH SPEC 03</div>
+                            <div class="card-back-code">
+ContentFilter.analyzeUrl(url) {
+  KEYWORDS: ['porn','xxx','adult','nsfw','gambling']
+  REASON: 'vulgar_link'
+}
+                            </div>
+                            <div class="card-back-tag">Content Classifier</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card-3d-wrap">
+                    <div class="card-3d-inner">
+                        <div class="card-front">
+                            <div>
+                                <div class="card-front-top">
+                                    <span class="card-number">04 / 05</span>
+                                    <span class="card-badge-icon">📹</span>
+                                </div>
+                                <h3 class="card-front-title">YouTube Content Obscurer</h3>
+                                <p class="card-front-body">
+                                    Monitors YouTube SPA video titles & metadata. Obscures video playback non-destructively when explicit keywords match.
+                                </p>
+                            </div>
+                            <div class="card-front-foot">
+                                <span>DOM MutationObserver</span>
+                                <span>Flip for Specs 🔄</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-title">// TECH SPEC 04</div>
+                            <div class="card-back-code">
+checkAndFilterYouTube() {
+  MutationObserver('#movie_player')
+  REPLACE_DOM: '<div class="blocked-mask">...</div>'
+}
+                            </div>
+                            <div class="card-back-tag">Shadow DOM Masking</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card-3d-wrap">
+                    <div class="card-3d-inner">
+                        <div class="card-front">
+                            <div>
+                                <div class="card-front-top">
+                                    <span class="card-number">05 / 05</span>
+                                    <span class="card-badge-icon">🎰</span>
+                                </div>
+                                <h3 class="card-front-title">Canvas Gambling Detector</h3>
+                                <p class="card-front-body">
+                                    Uses HTML5 Canvas pixel color histogram sampling to detect casino wheels, slot games, and gambling overlays.
+                                </p>
+                            </div>
+                            <div class="card-front-foot">
+                                <span>Pixel Histogram AI</span>
+                                <span>Flip for Specs 🔄</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-title">// TECH SPEC 05</div>
+                            <div class="card-back-code">
+CanvasPixelAnalyzer.sample(ctx) {
+  COLOR_HISTOGRAM: calculateRgbMatrix()
+  PATTERN: 'casino_slot_wheel'
+}
+                            </div>
+                            <div class="card-back-tag">Visual Processing</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card-3d-wrap">
+                    <div class="card-3d-inner">
+                        <div class="card-front">
+                            <div>
+                                <div class="card-front-top">
+                                    <span class="card-number">100% PRIVATE</span>
+                                    <span class="card-badge-icon">🛡️</span>
+                                </div>
+                                <h3 class="card-front-title">Zero Cloud Dependency</h3>
+                                <p class="card-front-body">
+                                    Runs 100% inside your local browser process. Zero history or analytics sent to external remote servers.
+                                </p>
+                            </div>
+                            <div class="card-front-foot">
+                                <span>On-Device Architecture</span>
+                                <span>Flip for Specs 🔄</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="card-back-title">// TECH SPEC 06</div>
+                            <div class="card-back-code">
+Manifest V3 ServiceWorker {
+  STORAGE: chrome.storage.local
+  EXTERNAL_CALLS: 0
+  PRIVACY: 100% On-Device
+}
+                            </div>
+                            <div class="card-back-tag">Manifest V3 Core</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive 3D Simulator Playground -->
+    <section id="simulator" class="sim-section">
+        <div class="container">
+            <div class="section-meta">
+                <span class="section-label">Interactive Sandbox</span>
+                <h2 class="section-heading">Test the 3D Shield Engine Live</h2>
+                <p class="section-subtext">Select a preset or type a custom URL to see real-time intercept simulation.</p>
+            </div>
+
+            <div class="sim-box-3d" id="sim-box-3d">
+                <div class="sim-header">
+                    <div class="sim-buttons">
+                        <span class="sim-btn-dot"></span>
+                        <span class="sim-btn-dot"></span>
+                        <span class="sim-btn-dot"></span>
+                    </div>
+                    <div class="sim-search-bar">
+                        <span class="code-font" id="sim-lock">🔒</span>
+                        <input type="text" id="sim-url-input" class="sim-input-field" value="https://micr0soft-security-update.xyz/verify">
+                    </div>
+                    <button id="sim-test-btn" class="btn btn-mono-primary btn-sm">Analyze</button>
+                </div>
+
+                <div class="sim-controls">
+                    <span class="section-label" style="margin-bottom:0;">Presets:</span>
+                    <button class="sim-preset-tag" data-url="http://insecure-http-bank.org/login">Insecure HTTP</button>
+                    <button class="sim-preset-tag" data-url="https://micr0soft-security-update.xyz/verify">Phishing Typosquatting</button>
+                    <button class="sim-preset-tag" data-url="https://example.com/nsfw-adult-content">Vulgar Adult Link</button>
+                    <button class="sim-preset-tag" data-url="https://youtube.com/watch?v=bad-vulgar-video">Bad YouTube Video</button>
+                    <button class="sim-preset-tag" data-url="https://github.com/josephmantero0-oss">Safe Clean Domain</button>
+                </div>
+
+                <div class="sim-display-viewport">
+                    <div class="sim-output-card blocked" id="sim-result-box">
+                        <div class="sim-out-icon" id="sim-icon">🛡️</div>
+                        <h3 class="sim-out-heading" id="sim-title">Security Intercept Warning</h3>
+                        <p id="sim-desc" class="text-muted">Access blocked for safety.</p>
+                        <div class="sim-out-log" id="sim-reason">
+                            LOG: heuristics_typo (Brand spoofing 'microsoft')
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Architecture Section -->
+    <section id="architecture" class="grid-section">
+        <div class="container">
+            <div class="section-meta">
+                <span class="section-label">Under The Hood</span>
+                <h2 class="section-heading">Built for modern browser standards.</h2>
+            </div>
+
+            <div class="grid-cards">
+                <div class="grid-card-3d">
+                    <span class="section-label">01 / MV3</span>
+                    <h4>Declarative Net Engine</h4>
+                    <p>Uses background service workers with non-blocking <code>chrome.webNavigation</code> hooks for maximum speed.</p>
+                </div>
+
+                <div class="grid-card-3d">
+                    <span class="section-label">02 / HEURISTICS</span>
+                    <h4>Multi-Factor Scoring</h4>
+                    <p>Evaluates TLD risk (.xyz, .top), IP literal hostname checks, and brand typo replacements.</p>
+                </div>
+
+                <div class="grid-card-3d">
+                    <span class="section-label">03 / SHADOW DOM</span>
+                    <h4>Non-Destructive Masking</h4>
+                    <p>Replaces only video playback elements in YouTube SPA without breaking page DOM navigation.</p>
+                </div>
+
+                <div class="grid-card-3d">
+                    <span class="section-label">04 / PRIVACY</span>
+                    <h4>Zero Server Overhead</h4>
+                    <p>Operates 100% offline with zero cloud server logging. Microsecond local execution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start Installation Guide -->
+    <section id="install-guide" class="grid-section">
+        <div class="container">
+            <div class="section-meta">
+                <span class="section-label">Deployment</span>
+                <h2 class="section-heading">Deployed & active in 60 seconds.</h2>
+            </div>
+
+            <div class="steps-row">
+                <div class="step-box-3d">
+                    <span class="step-idx">01</span>
+                    <h4>Download Package</h4>
+                    <p>Click <strong style="color: #fff;">Download Extension (.ZIP)</strong> and extract the folder.</p>
+                </div>
+
+                <div class="step-box-3d">
+                    <span class="step-idx">02</span>
+                    <h4>Extract Files</h4>
+                    <p>Unzip <code>phishing-web-detector-v1.2.0.zip</code> to a folder on your drive.</p>
+                </div>
+
+                <div class="step-box-3d">
+                    <span class="step-idx">03</span>
+                    <h4>Open Extensions</h4>
+                    <p>Navigate to <code class="code-font" style="color: #fff;">chrome://extensions</code> in address bar.</p>
+                </div>
+
+                <div class="step-box-3d">
+                    <span class="step-idx">04</span>
+                    <h4>Developer Mode</h4>
+                    <p>Toggle Developer Mode switch in top-right corner.</p>
+                </div>
+
+                <div class="step-box-3d">
+                    <span class="step-idx">05</span>
+                    <h4>Load Unpacked</h4>
+                    <p>Click Load Unpacked and select extracted folder. Done!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section id="faq" class="grid-section">
+        <div class="container">
+            <div class="section-meta">
+                <span class="section-label">Assistance</span>
+                <h2 class="section-heading">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-wrap">
+                <div class="faq-card">
+                    <div class="faq-q">
+                        <span>Is my browsing data sent to external servers?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-a">
+                        <p>No. 100% of all link analysis, blacklist checks, and YouTube content filtering happen locally inside your browser process using local JS service workers.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <div class="faq-q">
+                        <span>Will this slow down web browsing speed?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-a">
+                        <p>No. The detection heuristics execute in less than 1 millisecond using Manifest V3 asynchronous non-blocking APIs.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <div class="faq-q">
+                        <span>How to whitelist a blocked website?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-a">
+                        <p>You can bypass warning screens by clicking "Show Advanced" -> "Proceed Anyway (Whitelist)". The domain will be saved in local storage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer inspired by unfazedsolutions.online -->
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-badge">🛡️</div>
+                        <div>
+                            <div class="logo-title">JOSEPH'S SENTINEL</div>
+                            <div class="logo-sub">Security Shield</div>
+                        </div>
+                    </a>
+                    <p>Joseph's Sentinel — on-device browser protection with zero cloud dependency.</p>
+                </div>
+
+                <div class="footer-nav">
+                    <div class="footer-nav-col">
+                        <h5>Capabilities</h5>
+                        <ul>
+                            <li><a href="#capabilities">Capabilities Track</a></li>
+                            <li><a href="#simulator">3D Simulator</a></li>
+                            <li><a href="#architecture">Architecture</a></li>
+                            <li><a href="#install-guide">Install Guide</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-nav-col">
+                        <h5>Download</h5>
+                        <ul>
+                            <li><a href="JoysShield-Extension.zip" download="JoysShield-Extension.zip">⬇️ Download Extension (.ZIP)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-nav-col">
+                        <h5>Contact</h5>
+                        <ul>
+                            <li><a href="mailto:support@josephshield.online">support@josephshield.online</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Joseph's Sentinel. All rights reserved.</p>
+                <span>Status: Core Operational</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
