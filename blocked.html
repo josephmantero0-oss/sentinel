@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blocked — Joseph's Sentinel</title>
+    <link rel="stylesheet" href="blocked.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="warning-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-alert-triangle">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                </path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+        </div>
+        <h1 class="title">Joseph's Sentinel is Blocking the Site</h1>
+        <p class="description">
+            Attackers on <strong><span id="blocked-url">this site</span></strong> may trick you into doing something
+            dangerous like installing software or revealing your personal information (for example, passwords, phone
+            numbers, or credit cards).
+        </p>
+
+        <div class="details-box">
+            <h3>Detection Reason</h3>
+            <p id="detection-reason">Analyzing indicators...</p>
+        </div>
+
+        <div class="actions">
+            <button id="btn-back" class="btn btn-primary">Back to Safety</button>
+            <div class="advanced-section">
+                <button id="btn-advanced" class="btn btn-text">Show advanced</button>
+                <div id="advanced-content" class="hidden">
+                    <p>If you understand the risks to your security, you may proceed to the unverified site.</p>
+                    <button id="btn-proceed" class="btn btn-danger">Proceed to unsafe site (not recommended)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="blocked.js"></script>
+</body>
+
+</html>
